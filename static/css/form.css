@@ -1,0 +1,72 @@
+
+.nav-link{
+    color: white;
+}
+
+
+.bg-danger{
+    background-color:rgb(3,9,41)!important;
+}
+.navbar-brand{
+    color: white;
+}
+.AI{
+    padding: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.form1{
+    background-color: gray;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form2{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    height: 500px;
+    color: white;
+    background-color: rgb(3,9,41)!important;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .center{
+    padding: 100px;
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin to make text flush with the container */
+    padding: 10px 0; /* Add some padding above and below the text */
+  }
+  
+  .footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  .footer ul li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer ul li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }

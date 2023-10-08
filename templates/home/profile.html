@@ -1,0 +1,28 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block main-content %}
+<div class="center">
+	<form method="POST" enctype="multipart/form-data" class="card">
+		{% csrf_token %} 
+		
+	    {% if user.profile %}
+			<img src="#" alt="{{ user.username }}" class="avatar"  accept=".jpg,.jpeg,.png"/>
+	    {% endif %}
+	    
+	    <h2 class="text-center">{{ user.username | title }}</h2>
+	    <p class="text-center"><a href="mailto:{{user.email}}">{{user.email}}</a></p>
+   	    <hr>
+		
+            <label for="email">Email Address:</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{user.email}}" />
+			
+		
+		<label for="avatar">Avatar:</label>
+		<input type="file" name="avatar" id="avatar">	
+		
+	    <button type="submit" class="btn btn-primary">Update Profile</button>
+        <a href="{% url 'logout' %}" class="text-danger">Logout</a>
+        <a href="{% url 'passwordchange' %}" class="text-danger">Change Password</a>
+</div>
+{% endblock main-content %}

@@ -1,0 +1,31 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Product Detail{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-6 text-center align-self-center">
+            <img src="{{course.course_image.url}}" alt="" class="img-fluid img-thumbnail">
+        </div>
+        <div class="col-sm-5 offset-sm-1">
+            <h2>{{course.title}}</h2>
+            <hr>
+            <p>{{course.description}}</p> <br>
+            <h4>Tk. {{course.discounted_price}} <small class="fw-light text-decoration-line-through">{{course.selling_price}}</small></h4> <br>
+
+            <form action="/add-to-list" class="d-inline">
+                <input type="hidden" name="course_id" value={{course.id}} id="course_id">
+                <button type="submit" class='btn btn-primary shadow px-5 py-2' >Add to list</button>
+            </form>
+
+            <a href="{% url 'enrol-now' %}" class="btn btn-danger shadow px-5 py-2 ms-4">Enroll Now</a>
+            <h5 class="mt-5">Available Offers</h5>
+            <ul>
+                <li>Bkash Offer 5% Unlimited Cashback on Payment</li>
+                <li>Special Price Get extra Tk.5000 off (price inclusive of discount)</li>
+                <li>Partner Offer Tk. 1000 Gift Card on Every 1000th Transaction with Bkash, Nagad.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

@@ -1,0 +1,127 @@
+.nav-link{
+    color: white;
+}
+
+
+.bg-danger{
+    background-color:rgb(3,9,41)!important;
+}
+.navbar-brand{
+    color: white;
+}
+.AI{
+    padding: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+.card-body{
+    height: 300px;
+}
+.card-text{
+  font-size: 14;
+}
+.line{
+
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.solid{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-top-color: #DB0EB7;
+    border-top-width: 3px;
+    width: 100px;
+}
+.space{
+  height: 50px;
+}
+
+.solid1{
+    
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-color: black;
+  border-top-width: 2px;
+  width: 800px;
+}
+
+.container-fluid{
+    padding-left: 100px;
+}
+.button1{
+
+    text-align: center;
+}
+.button{
+    margin: 100px;
+    justify-content: center;
+    height: 70px;
+    width: 200px;
+    color: white;
+    background-color: #DB0EB7;
+    text-transform: uppercase!important;
+}
+.btn{
+    background-color: #DB0EB7!important;
+    text-align: center;
+}
+.footer {
+    height: 500px;
+    color: white;
+    background-color: rgb(3,9,41)!important;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .center{
+    padding: 100px;
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin to make text flush with the container */
+    padding: 10px 0; /* Add some padding above and below the text */
+  }
+  
+  .footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  .footer ul li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer ul li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .form1{
+    background-color: gray;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form2{
+    margin-left: auto;
+    margin-right: auto;
+}

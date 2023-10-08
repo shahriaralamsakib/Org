@@ -1,0 +1,60 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}List{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <h1 class="text-center mb-5">Course List</h1>
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3>List</h3>
+                    {% for l in list_course %}
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3 text-center align-self-center"><img
+                                src="{{l.course.course_image.url}}" alt="" srcset=""
+                                class="img-fluid img-thumbnail shadow-sm" height="150" width="150"> </div>
+                        <div class="col-sm-9">
+                            <div>
+                                <h5>{{l.course.title}}</h5>
+                                <p class="mb-2 text-muted small">{{l.course.description}}</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-sm btn-info  text-white mr-3 remove-item" cid="{{l.course.id}}">Remove item </a>
+                                    <p class="mb-0"><span><strong>Tk. {{l.course.discounted_price}}</strong></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <hr class="text-muted">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3>The Total Amount of</h3>
+                    <ul class="list-group">
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                            Amount<span>Tk. {{amount}}</span></li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                            <div>
+                                <strong>Total</strong> <small>(including VAT)</small>
+                            </div>
+                            <span><strong>Tk. <span id="totalamount"> {{totalamount}}</strong></span></span>
+                        </li>
+                    </ul>
+                    <div class="d-grid"><a href="#" class="btn btn-primary">Confirm Course Enrollment</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock main-content %}
